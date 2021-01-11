@@ -94,7 +94,7 @@ component extends="EventHandler" {
 			// Setup General Error Response
 			arguments.prc.response
 				.setError( true )
-				.addMessage( "General application error: #e.message#" )
+				.addMessage( "General application error: #Len(e.message) ? e.message : e.Detail#" )
 				.setStatusCode( arguments.event.STATUS.INTERNAL_ERROR )
 				.setStatusText( "General application error" );
 
